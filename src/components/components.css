@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'LogoFont';
+    src: local('LogoFont'), url(/assets/fonts/primary.ttf) format('opentype');
+}
+@font-face {
+    font-family: 'DisplayFont';
+    src: local('LogoFont'), url(/assets/fonts/secondary.otf) format('truetype');
+}
+@media screen and (max-width: 992px) {
+    .css-1fu2e3p-MuiPaper-root-MuiDialog-paper {
+        margin: 12px !important;
+    }
+    .css-ypiqx9-MuiDialogContent-root {
+        padding: 10px 14px;
+    }
+    .css-ypiqx9-MuiDialogContent-root {
+        padding: 10px 14px !important;
+    }
+    .css-4pp0nb-MuiPaper-root-MuiDialog-paper {
+        margin: 0px !important;
+    }
+    .css-4pp0nb-MuiPaper-root-MuiDialog-paper {
+        max-width: calc(100% - 10px) !important;
+    }
+} 
