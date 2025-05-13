@@ -103,7 +103,7 @@ function App() {
                 switch (Name) {
                   case 'Gallery':
                     return Active ? <GalleryScreen key={Name} /> : null;
-                  case 'Events':
+                  case 'Register':
                     return Active ? <EventsScreen key={Name} /> : null;
                   case 'Calendar':
                     return Active ? <CalendarScreen key={Name} /> : null;

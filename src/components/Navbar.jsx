@@ -59,9 +59,9 @@ const Navbar = (props) => {
         toggleDrawer(false);
         dispatch(setActiveScreen('Home'));
         break;
-      case 'Events':
+      case 'Register':
         toggleDrawer(false);
-        dispatch(setActiveScreen('Events'));
+        dispatch(setActiveScreen('Register'));
         window.open("https://mimacombweb.myvscloud.com/webtrac/web/search.html?Action=Start&SubAction=&_csrf_token=bc6O0E6L1K6Z2B2T24532J5W6V424S6I715T3Y52531B5J4F5A5L1E705S4O4L1N5F4T4L50035J4J58571T5M4P6I4C6L5Y5U6N47176Y4J584V08694K6L690Q554U56&type=Youth&beginmonth=&endmonth=&subtype=&age=&grade=&registrationevent=&location=&keyword=dance&keywordoption=Match+One&instructor=&dayoption=Any&timeblock=&primarycode=&gender=&spotsavailable=&bydayonly=No&beginyear=&season=&showwithavailable=No&display=Detail&search=yes&page=1&module=AR&multiselectlist_value=&arwebsearch_buttonsearch=yes");
         break;
       case 'Calendar':
