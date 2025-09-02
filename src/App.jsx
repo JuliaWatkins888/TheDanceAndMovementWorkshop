@@ -15,6 +15,7 @@ import LinkBar from './components/LinkBar';
 import BlogScreen from './screens/BlogScreen';
 import DashboardScreen from './screens/DashboardScreen'; 
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import StaffScreen from './screens/StaffScreen';
 
 function App() {
   const dispatch = useDispatch();
@@ -60,10 +61,12 @@ function App() {
         let activeCount = 0;
         pagesSnapshot.forEach((doc) => {
           const data = doc.data();
+          console.log(`Adding one to the count bc ${data.Name} has an active field of ${data.Active}`)
           if (data.Active) activeCount++;
           pageData.push({ id: doc.id, ...data });
         });
         dispatch(setPages(pageData));
+        console.log(activeCount)
         dispatch(setActivePagesCount(activeCount));
       } catch (error) {
         console.error('Error fetching pages: ', error);
@@ -96,7 +99,7 @@ function App() {
                 zIndex: 1, 
                 backgroundColor: theme.white
               }}
-            >
+            > 
               <HomeScreen />
               {pages.map(page => {
                 const { Name, Active } = page;
@@ -105,6 +108,8 @@ function App() {
                     return Active ? <GalleryScreen key={Name} /> : null;
                   case 'Register':
                     return Active ? <EventsScreen key={Name} /> : null;
+                  case 'Faculty':
+                    return Active ? <StaffScreen key={Name} /> : null;
                   case 'Calendar':
                     return Active ? <CalendarScreen key={Name} /> : null;
                   case 'Blog':

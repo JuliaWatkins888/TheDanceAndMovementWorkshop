@@ -33,6 +33,8 @@ const Navbar = (props) => {
   const d = new Date();
   let hour = d.getHours();
 
+  useEffect(()=>{console.log(pages)}, [pages])
+
   useEffect(() => {
     setTimeout(() => {
       dispatch(setNavEnter(true));
@@ -67,6 +69,10 @@ const Navbar = (props) => {
       case 'Calendar':
         toggleDrawer(false);
         dispatch(setActiveScreen('Calendar'));
+        break;
+      case 'Faculty':
+        toggleDrawer(false);
+        dispatch(setActiveScreen('Faculty'));
         break;
       case 'Gallery':
         toggleDrawer(false);

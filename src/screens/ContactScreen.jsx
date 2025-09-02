@@ -116,7 +116,7 @@ function ContactScreen() {
       }}
     >
       <LogoFont
-        text="I'd Love To Hear From You!"
+        text="We'd Love To Hear From You!"
         fontColor={theme.black}
         fontWeight={700}
         fontAlign="center"
